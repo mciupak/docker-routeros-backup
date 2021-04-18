@@ -2,7 +2,7 @@ FROM alpine:latest
 
 WORKDIR /home/app
 
-RUN apk update && apk add openssh && rm -rf /var/cache/apk/* 
+RUN apk add --no-cache openssh tzdata 
 
 # Add crontab file in the cron directory
 ADD files/crontab /var/spool/cron/crontabs/root
