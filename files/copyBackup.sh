@@ -24,7 +24,7 @@ BACKUP_PATH=/home/app/backup
 CONF=/home/app/backup.conf
 EXPFILE=config.rsc
 BKPFILE=system.backup
-CMD="/export file=$EXPFILE; /system backup save name=$BKPFILE;"
+CMD="/export show-sensitive terse file=$EXPFILE; /system backup save name=$BKPFILE;"
 
 # SSH configuration
 SSH_USER=backup
